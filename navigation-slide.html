@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <title>Navigation</title>
+  </head>
+  <style>
+    body{
+  margin: auto 0;
+}
+
+.NavBar{
+  position:absolute;
+  top:0;
+  left:0;
+  width:0%;
+  height:100%;
+  background-color:#262221;
+  overflow-x:hidden;
+  padding-top:50px;
+  transition:0.3s;
+}
+
+.NavBar a{
+   padding: 5px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.NavBav a:hover{
+    color: #f1f1f1;
+}
+.NavBar .closeBtn{
+  position:absolute;
+  top:15;
+  right:25px;
+  font-size:30px;
+}
+
+.nav{
+  background-color:black;
+  overflow-x:hidden;
+  margin:0;
+  padding:10px;
+}
+.nav a{
+  color:white;
+  margin:0;
+}
+  </style>
+  
+  <body>
+
+    <div class="NavBar" id="NavBar">
+      <a href="javascript:void(0)" class="closeBtn" onclick="closeBtn()"> &times;</a>
+      <a href="#">Home</a>
+      <a href="#">Product</a>
+      <a href="#">Info</a>
+      <a href="#">About Us</a>
+      <a href="#">Contact US</a>
+   </div>
+   
+    <div class="page" id="page">
+      <nav class="nav">
+      <a style="cursor:pointer; font-size:30px;" onclick="OpenNav()"> &#9776; Menu</a>
+      </nav> 
+    </div> 
+   
+   <script>
+    function OpenNav(){
+     document.getElementById('NavBar').style.width= "250px";
+     document.getElementById('page').style.marginLeft= "250px"; 
+    } 
+     function closeBtn(){
+     document.getElementById('NavBar').style.width= "0";
+     document.getElementById('page').style.marginLeft= "0"; 
+    } 
+   </script> 
+  </body>
+</html>
